@@ -1,0 +1,17 @@
+.header {
+  position: relative;
+  padding: 1.5rem 0;
+
+  &__main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 6rem;
+    color: transparentize($white, 0.75);
+    transition: 250ms;
+  }
+
+  &__sub {
+    font-size: 3rem;
+  }
+}
