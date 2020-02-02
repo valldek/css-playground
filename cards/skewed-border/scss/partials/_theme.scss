@@ -1,0 +1,29 @@
+.theme {
+
+  &__switcher {
+  margin: 3rem;
+  width: 10rem;
+  }
+
+  &__label {
+    @include flex-center(column);
+    padding: 1rem;
+    font-size: 2rem;
+    color: var(--secondary);
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked ~ .checkbox::before {
+      transform: translateX(5rem);
+      background-color: var(--primary);
+    }
+
+    &:checked ~ .checkbox {
+      background-color: var(--secondary);
+    }
+  }
+
+}
