@@ -4,12 +4,14 @@
 
 body {
   @include flex-center(row);
-  background-color: $primary;
+  min-height: 100vh;
+  background-color: $secondary;
 }
 
 .grid {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 5rem;
+  gap: 10rem;
+  width: 90%;
 }
