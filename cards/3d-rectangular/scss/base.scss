@@ -1,0 +1,15 @@
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  @include flex-center(row);
+  background-color: $primary;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem;
+}
