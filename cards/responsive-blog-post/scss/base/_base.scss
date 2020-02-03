@@ -1,0 +1,6 @@
+body {
+  height: 100vh;
+  @include flex-center;
+  padding: 0 2rem;
+  background-color: $secondary;
+}
