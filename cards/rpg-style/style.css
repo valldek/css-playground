@@ -1,5 +1,73 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+}
+
 .card {
   width: 30rem;
+  border: 1px solid #292929;
+  box-shadow: 0 5px 20px 0 #292929;
+  transition: 500ms;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card:hover .card__image {
+  filter: grayscale(0);
+}
+.card:hover .card__detail {
+  color: orange;
+}
+.card__img-container {
+  width: 100%;
+}
+.card__image {
+  width: 100%;
+  filter: grayscale(1);
+  transition: 500ms;
+}
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+.card__header {
+  grid-column: 1/span 3;
+  text-align: center;
+}
+.card__title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.card__text {
+  grid-column: 1/span 3;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+.card__detail {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
 }
 
 /*# sourceMappingURL=style.css.map */

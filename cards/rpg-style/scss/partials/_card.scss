@@ -1,3 +1,59 @@
 .card {
   width: 30rem;
+  border: 1px solid $black;
+  box-shadow: 0 5px 20px 0 $black;
+  transition: 500ms;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:hover &__image {
+    filter: grayscale(0);
+  }
+
+  &:hover &__detail {
+    color: orange;
+  }
+
+
+  &__img-container {
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    filter: grayscale(1);
+    transition: 500ms;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding: 2rem;
+
+  }
+
+  &__header {
+    grid-column: 1 / span 3;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &__text {
+    grid-column: 1 / span 3;
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  &__detail {
+    font-size: 2rem;
+    @include flex-center;
+  }
 }
