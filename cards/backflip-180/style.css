@@ -19,20 +19,25 @@ body {
   flex-direction: row;
   background: #292929;
   color: #ebebeb;
+}
+
+.card-container {
+  width: 30rem;
+  height: 40rem;
   perspective: 600px;
+}
+.card-container:hover .card {
+  transform: rotateY(180deg);
 }
 
 .card {
   position: relative;
-  width: 30rem;
-  padding-bottom: 40rem;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
-  transform-style: preserve-3d;
   transition: 1s ease-in-out;
+  transform-style: preserve-3d;
   box-shadow: 0 5px 20px 0 black;
-}
-.card:hover {
-  transform: rotateY(180deg);
 }
 .card__front, .card__back {
   position: absolute;
