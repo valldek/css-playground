@@ -38,7 +38,7 @@ body {
   background-color: #f2f2f2;
   padding: 2rem;
   clip-path: circle(0);
-  transition: 500ms;
+  transition: 1000ms;
 }
 .card__header {
   padding: 2rem 0;
@@ -50,6 +50,7 @@ body {
 .card__text {
   font-size: 1.6rem;
   line-height: 1.5;
+  padding-bottom: 5rem;
 }
 .card__button {
   position: absolute;
