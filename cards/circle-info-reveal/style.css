@@ -1,3 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card {
+  position: relative;
+  width: 30rem;
+  max-width: 30rem;
+  margin: 0 2rem;
+  background-color: #f2f2f2;
+}
+.card:hover .card__info {
+  clip-path: circle(100%);
+}
+.card__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  clip-path: circle(0);
+  transition: 500ms;
+}
+.card__header {
+  padding: 2rem 0;
+}
+.card__title {
+  font-size: 3rem;
+  text-align: center;
+}
+.card__text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.card__button {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem 2rem;
+  border: 1px solid #262626;
+  color: #262626;
+  transition: 250ms;
+}
+.card__button:hover {
+  transform: skew(1deg, 1deg);
+}
+.card__image-container {
+  width: 100%;
+  height: 100%;
+}
+.card__image {
+  width: 100%;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=style.css.map */
