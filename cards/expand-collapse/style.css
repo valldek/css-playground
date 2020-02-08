@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, #9796f0, #fbc7d4);
+}
+
+.card {
+  position: relative;
+  flex-basis: 30rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #262626;
+  border-radius: 5px;
+  padding: 5rem;
+  box-shadow: 0 5px 20px 0 #262626;
+}
+.card__picture {
+  box-sizing: content-box;
+  width: 75%;
+  padding-bottom: 75%;
+  border-radius: 50%;
+  border: 5px solid rgba(38, 38, 38, 0.75);
+  background: rgba(242, 242, 242, 0.35);
+}
+.card__header {
+  margin: 2rem 0;
+}
+.card__title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.card__text {
+  font-size: 1.4rem;
+  text-align: justify;
+}
+.card__link {
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  bottom: 2rem;
+}
+.card__icon {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.card__icon::before, .card__icon::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  width: 20px;
+  height: 2px;
+  background-color: rgba(38, 38, 38, 0.75);
+}
+.card__icon::before {
+  margin-left: -18px;
+  transform: rotateZ(25deg);
+}
+.card__icon::after {
+  transform: rotateZ(-25deg);
+}
+
+/*# sourceMappingURL=style.css.map */
