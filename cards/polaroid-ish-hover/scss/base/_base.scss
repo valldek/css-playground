@@ -1,0 +1,12 @@
+body {
+  @include flex-center(column);
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(90deg, $bg-primary, $bg-secondary);
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    @include flex-center;
+  }
+}
