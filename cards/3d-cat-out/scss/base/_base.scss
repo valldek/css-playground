@@ -1,0 +1,10 @@
+body {
+  @include flex-center(column);
+  background-color: $redish;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    @include flex-center;
+  }
+}
