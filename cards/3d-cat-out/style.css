@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #e63746;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.card {
+  position: relative;
+  width: 30rem;
+  height: 20rem;
+  cursor: pointer;
+  perspective: 500px;
+}
+.card:hover .card__inside {
+  transform: rotateY(15deg);
+}
+.card:hover .card__outside {
+  transform: rotateY(-15deg);
+}
+.card__outside, .card__inside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card__outside {
+  box-sizing: content-box;
+  border: 1rem solid #1d3658;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: 500ms;
+}
+.card__inside {
+  background-color: #447a9c;
+  border: 1rem solid transparent;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition: 500ms;
+}
+
+/*# sourceMappingURL=style.css.map */

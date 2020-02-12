@@ -1,0 +1,41 @@
+.card {
+  position: relative;
+  width: 30rem;
+  height: 20rem;
+  cursor: pointer;
+  perspective: 500px;
+
+  &:hover &__inside {
+    transform: rotateY(15deg);
+  }
+
+  &:hover &__outside {
+    transform: rotateY(-15deg);
+  }
+
+  &__outside,
+  &__inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__outside {
+    box-sizing: content-box;
+    border: 1rem solid $blue-dark;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: 500ms;
+  }
+
+  &__inside {
+    background-color: $blue;
+    border: 1rem solid transparent;
+    top: 1rem;
+    left: 1rem;
+    @include flex-center;
+    transition: 500ms;
+  }
+}
