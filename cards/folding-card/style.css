@@ -8,6 +8,7 @@
 
 :root {
   font-size: 62.5%;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100vh;
+  background: linear-gradient(90deg, #d3cce3, #e9e4f0);
 }
 
 @media screen and (mix-width: 640px) {
@@ -31,19 +33,29 @@ body {
   position: relative;
   width: 100%;
   max-width: 30rem;
+  background: #f2f2f2;
+  border: 1px solid #262626;
   perspective: 1000px;
+  box-shadow: 0 0.5rem 2.5rem 0 #262626;
 }
 .card:hover .card__content--right-side {
-  transform: rotateY(-30deg);
+  transform: rotateY(-35deg);
+}
+.card:hover .card__icon {
+  transform: translateX(2rem);
 }
 .card__content {
   position: relative;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
+  padding: 2.5rem;
+  background-color: #262626;
   color: white;
+  border: 4px solid #262626;
 }
 .card__content--left-side {
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
@@ -51,8 +63,47 @@ body {
 .card__content--right-side {
   position: absolute;
   clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%);
-  background-color: red;
+  background-color: #262626;
   transition: 500ms;
+}
+.card__title {
+  font-size: 3rem;
+  font-family: "Abril FatFace", cursive;
+  text-align: center;
+}
+.card__text {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 2rem 0;
+}
+.card__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+.card__icon {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  height: 100%;
+  width: 2rem;
+  transition: 500ms;
+  z-index: -1;
+  cursor: pointer;
+}
+.card__icon::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1rem);
+  left: 0.9rem;
+  border-top: 1rem solid transparent;
+  border-left: 0.6rem solid #262626;
+  border-bottom: 1rem solid transparent;
+  border-right: 0.6rem solid transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
