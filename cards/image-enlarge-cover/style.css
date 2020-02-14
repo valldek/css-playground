@@ -30,22 +30,40 @@ body {
   }
 }
 .card {
+  position: relative;
   width: 100%;
   max-width: 30rem;
+  height: 42rem;
   background: #f2f2f2;
   box-shadow: 0 0 2rem 0 #262626;
   border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card:hover .card__content {
+  height: 0;
+  bottom: -4rem;
+}
+.card:hover .card__image {
+  height: 100%;
 }
 .card__image-container {
+  position: absolute;
+  top: 0;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .card__image {
-  width: 100%;
-  object-fit: cover;
+  height: 60%;
+  transition: 500ms;
 }
 .card__content {
-  padding: 3rem;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  background: #f2f2f2;
+  height: 25rem;
+  transition: 500ms;
 }
 .card__title {
   font-size: 3.6rem;

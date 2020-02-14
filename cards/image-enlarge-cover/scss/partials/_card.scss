@@ -1,22 +1,42 @@
 .card {
+  position: relative;
   width: 100%;
   max-width: 30rem;
+  height: 42rem;
   background: $white;
   box-shadow: 0 0 2rem 0 $black;
   border-radius: 0.5rem;
+  overflow: hidden;
+
+  &:hover &__content {
+    height: 0;
+    bottom: -4rem;
+  }
+
+  &:hover &__image {
+    height: 100%;
+  }
 
   &__image-container {
+    position: absolute;
+    top: 0;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 
   &__image {
-    width: 100%;
-    object-fit: cover;
+    height: 60%;
+    transition: 500ms;
   }
 
   &__content {
-    padding: 3rem;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    background: $white;
+    height: 25rem;
+    transition: 500ms;
   }
 
   &__title {
