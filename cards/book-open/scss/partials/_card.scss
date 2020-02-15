@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 30rem;
+  height: 42rem;
+  background: $white;
+  box-shadow: 0 0 2rem 0 $black;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &:hover &__content {
+    height: 0;
+    bottom: -4rem;
+  }
+
+  &:hover &__image {
+    height: 100%;
+  }
+
+  &__image-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 60%;
+    transition: 500ms;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    background: $white;
+    height: 25rem;
+    transition: 500ms;
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  &__paragraph {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 2rem 0;
+  }
+
+  &__footer {
+    @include flex-center(row);
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: $black;
+    mix-blend-mode: difference;
+  }
+}
