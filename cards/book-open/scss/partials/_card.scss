@@ -1,61 +1,51 @@
-.card {
+.book {
   position: relative;
-  width: 100%;
-  max-width: 30rem;
-  height: 42rem;
-  background: $white;
-  box-shadow: 0 0 2rem 0 $black;
-  border-radius: 0.5rem;
-  overflow: hidden;
+  width: 25rem;
+  height: 40rem;
+  perspective: 1500px;
+  transition: 500ms;
 
-  &:hover &__content {
-    height: 0;
-    bottom: -4rem;
+  &:hover {
+    transform: translateX(12.5rem);
   }
 
-  &:hover &__image {
-    height: 100%;
+  &:hover &__cover {
+    transform: rotateY(-180deg);
   }
 
-  &__image-container {
+  &__cover,
+  &__inside,
+  .cover {
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
   }
 
-  &__image {
-    height: 60%;
+  &__cover {
+    transform-origin: 0 50%;
     transition: 500ms;
+    transform-style: preserve-3d;
   }
 
-  &__content {
-    position: absolute;
-    bottom: 0;
+  &__inside {
+    z-index: -1;
+    background-color: $white;
+    box-shadow: inset 1px 0 1px 0 $black;
+  }
+
+  &__text {
     padding: 2rem;
-    background: $white;
-    height: 25rem;
-    transition: 500ms;
   }
+}
 
-  &__title {
-    font-size: 3.6rem;
-    text-align: center;
-    font-weight: 300;
-  }
+.cover {
+  backface-visibility: hidden;
 
-  &__paragraph {
-    font-size: 1.4rem;
-    font-weight: 700;
-    padding: 2rem 0;
-  }
-
-  &__footer {
-    @include flex-center(row);
-    justify-content: space-between;
-    font-size: 1.2rem;
-    color: $black;
-    mix-blend-mode: difference;
+  &--back {
+    transform: rotateY(180deg);
+    background-color: $white;
+    box-shadow: inset -1px 0 1px 0 $black;
   }
 }

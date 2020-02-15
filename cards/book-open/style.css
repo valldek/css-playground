@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (mix-width: 640px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.book {
+  position: relative;
+  width: 25rem;
+  height: 40rem;
+  perspective: 1500px;
+  transition: 500ms;
+}
+.book:hover {
+  transform: translateX(12.5rem);
+}
+.book:hover .book__cover {
+  transform: rotateY(-180deg);
+}
+.book__cover, .book__inside,
+.book .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.book__cover {
+  transform-origin: 0 50%;
+  transition: 500ms;
+  transform-style: preserve-3d;
+}
+.book__inside {
+  z-index: -1;
+  background-color: #f2f2f2;
+  box-shadow: inset 1px 0 1px 0 #262626;
+}
+.book__text {
+  padding: 2rem;
+}
+
+.cover {
+  backface-visibility: hidden;
+}
+.cover--back {
+  transform: rotateY(180deg);
+  background-color: #f2f2f2;
+  box-shadow: inset -1px 0 1px 0 #262626;
+}
+
+/*# sourceMappingURL=style.css.map */
