@@ -1,0 +1,12 @@
+body {
+  @include flex-center(column);
+  width: 100%;
+  height: 100vh;
+
+}
+
+@media screen and (mix-width: 640px) {
+  body {
+    @include flex-center;
+  }
+}
