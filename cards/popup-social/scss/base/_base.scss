@@ -5,8 +5,8 @@ body {
 
 }
 
-@media screen and (mix-width: 640px) {
+@media screen and (min-width: 640px) {
   body {
-    @include flex-center;
+    @include flex-center(row);
   }
 }

@@ -20,13 +20,78 @@ body {
   height: 100vh;
 }
 
-@media screen and (mix-width: 640px) {
+@media screen and (min-width: 640px) {
   body {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
   }
+}
+.card {
+  width: 10rem;
+  height: 10rem;
+  perspective: 1000px;
+  margin: 5rem;
+}
+.card:hover .card__social {
+  transform: rotateX(45deg) rotateZ(45deg) translate(-66px, -66px);
+}
+.card:hover .card__social::before {
+  transform: translate(66px, 66px);
+}
+.card:hover .card__social::after {
+  transform: translate(33px, 33px);
+}
+.card__social {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotateX(45deg) rotateZ(45deg);
+  transition: 750ms;
+  cursor: pointer;
+}
+.card__social::before, .card__social::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.card__social::before {
+  transition: 750ms;
+}
+.card__social::after {
+  transition: 750ms;
+}
+.card__social--fb {
+  background-color: #3b5897;
+}
+.card__social--fb::before {
+  background-color: rgba(59, 88, 151, 0.34);
+}
+.card__social--fb::after {
+  background-color: rgba(59, 88, 151, 0.67);
+}
+.card__social--yt {
+  background-color: red;
+}
+.card__social--yt::before {
+  background-color: rgba(255, 0, 0, 0.34);
+}
+.card__social--yt::after {
+  background-color: rgba(255, 0, 0, 0.67);
+}
+.card__social--tw {
+  background-color: #1da1f2;
+}
+.card__social--tw::before {
+  background-color: rgba(29, 161, 242, 0.34);
+}
+.card__social--tw::after {
+  background-color: rgba(29, 161, 242, 0.67);
 }
 
 /*# sourceMappingURL=style.css.map */
