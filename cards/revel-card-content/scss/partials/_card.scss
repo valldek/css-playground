@@ -1,0 +1,67 @@
+.card {
+  width: 30rem;
+  height: 45rem;
+  position: relative;
+  outline: 1px dashed $black;
+  outline-offset: -1px;
+
+  &:hover &__content {
+    transform: translate(-2rem, -2rem);
+  }
+
+  &:hover &__header {
+    top: 0;
+  }
+
+  &:hover &__details {
+    opacity: 1;
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 1;
+    padding: 2rem;
+    border: 1px solid $black;
+    transition: 250ms;
+  }
+
+  &__header {
+    position: relative;
+    top: calc(100% - 3rem);
+    transition: 250ms;
+  }
+
+  &__details {
+    opacity: 0;
+    transition: 500ms;
+  }
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin: 2rem 0;
+  }
+
+  &__button {
+    padding: 1rem 2rem;
+
+    border: 1px solid $black;
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+
+    }
+  }
+}

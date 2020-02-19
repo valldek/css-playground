@@ -1,0 +1,18 @@
+@mixin flex-center($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin social-color($color: $fb) {
+  background-color: $color;
+
+  &::before {
+    background-color: transparentize($color, 0.66);
+  }
+
+  &::after {
+    background-color: transparentize($color, 0.33);
+  }
+}
