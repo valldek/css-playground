@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (min-width: 640px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.card {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  clip-path: polygon(25% 25%, 75% 25%, 75% 75%, 25% 75%);
+  background: blue;
+  transition: 250ms;
+}
+.card:hover {
+  transform: rotateZ(15deg);
+  clip-path: polygon(0% 0%, 50% 0%, 50% 25%, 75% 25%, 75% 50%, 100% 50%, 100% 100%, 50% 100%, 50% 75%, 25% 75%, 25% 50%, 0% 50%);
+}
+.card:hover .card__price, .card:hover .card__size {
+  opacity: 1;
+}
+.card__price, .card__size {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 500ms;
+}
+.card__size {
+  top: 0;
+  left: 0;
+}
+.card__list {
+  font-size: 1.4rem;
+  font-weight: 700;
+  list-style: none;
+}
+.card__price {
+  top: 50%;
+  left: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

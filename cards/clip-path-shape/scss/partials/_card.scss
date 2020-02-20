@@ -1,0 +1,58 @@
+.card {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  clip-path: polygon(25% 25%, 75% 25%, 75% 75%, 25% 75%);
+  background: blue;
+  transition: 250ms;
+
+  &:hover {
+    transform: rotateZ(15deg);
+    clip-path: polygon(
+      0% 0%,
+      50% 0%,
+      50% 25%,
+      75% 25%,
+      75% 50%,
+      100% 50%,
+      100% 100%,
+      50% 100%,
+      50% 75%,
+      25% 75%,
+      25% 50%,
+      0% 50%
+      );
+  }
+
+  &:hover &__price,
+  &:hover &__size {
+    opacity: 1;
+  }
+
+  &__price,
+  &__size {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    @include flex-center(column);
+    opacity: 0;
+    transition: 500ms;
+  }
+
+  &__size {
+    top: 0;
+    left: 0;
+  }
+
+  &__list {
+    font-size: 1.4rem;
+    font-weight: 700;
+    list-style: none;
+
+  }
+
+  &__price {
+    top: 50%;
+    left: 50%;
+  }
+}
