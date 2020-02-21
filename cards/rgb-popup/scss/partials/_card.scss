@@ -1,0 +1,50 @@
+$border-size: 2px;
+
+.card {
+  position: relative;
+  width: 30rem;
+  height: 6rem;
+  border: $border-size solid $black;
+  background-color: $white;
+
+  &:hover &__content {
+    transform: translate(0, 0);
+  }
+
+  &__content {
+    position: absolute;
+    top: -$border-size;
+    left: -$border-size;
+    width: 100%;
+    height: 100%;
+    border: $border-size solid $black;
+    background-color: $white;
+    z-index: 11;
+    transition: 250ms;
+    padding: 2rem;
+
+    &:nth-of-type(2) {
+      transform: translate(5px, 5px);
+      border-color: $red;
+    }
+
+    &:nth-of-type(3) {
+      transform: translate(10px, 10px);
+      border-color: $green;
+    }
+
+    &:nth-of-type(4) {
+      transform: translate(15px, 15px);
+      border-color: $blue;
+    }
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    padding: 1rem 0;
+  }
+}
