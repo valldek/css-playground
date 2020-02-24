@@ -1,43 +1,56 @@
 .card {
-  @include flex-center(column);
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 30rem;
-  height: 45rem;
-  border: 1px solid $black;
-  padding: 5rem;
-  background-color: $red;
-  color: $white;
-  transition: 500ms;
+  position: relative;
+  width:45rem;
+  height: 20rem;
+  overflow: hidden;
+  margin: 1rem;
+  box-shadow: 1px 1px 5px 0 $black;
 
-  &:nth-of-type(2) {
-    background-color: $blue;
+  &--bg01 {
+    background: url('./img/landscape01.jpg') center center no-repeat;
+    background-size: cover;
   }
 
-  &:nth-of-type(3) {
-    background-color: $green;
+  &--bg02 {
+    background: url('./img/landscape02.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  &:hover &__circle {
+    transform: scale(20);
+  }
+
+  &__header {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8rem;
+    height: 100%;
+    background-color: white;
+    color: $black;
   }
 
   &__title {
-    font-size: 3.6rem;
-    font-weight: 700;
-  }
-
-  &__text {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 300;
+    text-orientation: mixed;
+    writing-mode: vertical-lr;
+    padding: 1rem;
   }
 
-  &__button {
-    background-color: transparent;
-    border: 1px solid $white;
-    padding: 1rem 2rem;
-    color: $white;
+  &__circle {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $red;
     transition: 250ms;
-    cursor: pointer;
+    mix-blend-mode: multiply;
 
-    &:hover {
-      transform: rotateZ(-5deg);
+    &--blue {
+      background-color: $blue;
     }
   }
 }

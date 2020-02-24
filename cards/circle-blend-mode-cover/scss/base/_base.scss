@@ -2,31 +2,5 @@ body {
   @include flex-center(column);
   width: 100%;
   min-height: 100vh;
-
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 2rem;
-
-  &:hover .card {
-    box-shadow: 0 5px 10px 0 $black;
-  }
-
-  &:hover .card:not(:hover) {
-    filter: blur(1rem);
-  }
-}
-
-@media screen and (min-width: 640px) {
-  body {
-    @include flex-center(row);
-    flex-wrap: wrap;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  background-color: $white;
 }

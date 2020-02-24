@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.card {
+  position: relative;
+  width: 45rem;
+  height: 20rem;
+  overflow: hidden;
+  margin: 1rem;
+  box-shadow: 1px 1px 5px 0 #262626;
+}
+.card--bg01 {
+  background: url("./img/landscape01.jpg") center center no-repeat;
+  background-size: cover;
+}
+.card--bg02 {
+  background: url("./img/landscape02.jpg") center center no-repeat;
+  background-size: cover;
+}
+.card:hover .card__circle {
+  transform: scale(20);
+}
+.card__header {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8rem;
+  height: 100%;
+  background-color: white;
+  color: #262626;
+}
+.card__title {
+  font-size: 2rem;
+  font-weight: 300;
+  text-orientation: mixed;
+  writing-mode: vertical-lr;
+  padding: 1rem;
+}
+.card__circle {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #e55a34;
+  transition: 250ms;
+  mix-blend-mode: multiply;
+}
+.card__circle--blue {
+  background-color: #5cc0eb;
+}
+
+/*# sourceMappingURL=style.css.map */
