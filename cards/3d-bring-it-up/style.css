@@ -23,15 +23,43 @@ body {
 }
 
 .card {
-  width: 30rem;
+  width: 25rem;
   height: 40rem;
-  border: 1px solid #262626;
   transform: rotateX(75deg) translate3d(0, -20rem, -10rem);
   transform-origin: 50% 100%;
   transition: 500ms;
+  box-shadow: 0 1rem 5rem 0 #262626;
+  background-color: #e55a34;
 }
 .card:hover {
   transform: rotateX(0deg) translate3d(0, 0, 0);
+  box-shadow: 0 0 1rem 0 #262626;
+}
+.card__image-container {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+.card__image {
+  height: 100%;
+  object-fit: cover;
+}
+.card__content {
+  padding: 2rem;
+}
+.card__header {
+  margin-bottom: 2rem;
+}
+.card__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.card__paragraph {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */
