@@ -19,6 +19,19 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: #f2f2f2;
+  perspective: 600px;
+}
+
+.card {
+  width: 30rem;
+  height: 40rem;
+  border: 1px solid #262626;
+  transform: rotateX(75deg) translate3d(0, -20rem, -10rem);
+  transform-origin: 50% 100%;
+  transition: 500ms;
+}
+.card:hover {
+  transform: rotateX(0deg) translate3d(0, 0, 0);
 }
 
 /*# sourceMappingURL=style.css.map */
